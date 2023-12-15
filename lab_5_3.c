@@ -21,28 +21,35 @@ void appendArrays(int array1[], int array2[],int size1, int size2, int index){
     }
 }
 
-int main()
-{
-    int my_array1[]={10, 9, 8, 15, 3};
-    int size1=sizeof(my_array1)/sizeof(my_array1[0]);
-    int rotate_index=2;
-    rotateArray(my_array1,size1,rotate_index);
-    for(int i=0; i < size1; i++){
-        printf("%d ", my_array1[i]);
+int main(){
+    int rotate_index;
+    int array1[]={10, 9, 8, 15, 3};
+    int sizeArray1 = sizeof(array1)/sizeof(array1[0]);
+    int array2[]={2, 7, 4, 5, 11, 16};
+    int sizeArray2 = sizeof(array2)/sizeof(array2[0]);
+    printf("Array1: ");
+    for(int i=0; i<sizeArray1; i++){
+        printf("%d ",array1[i]);
+     }
+    printf("\n");
+    printf("Array2: ");
+    for(int i=0; i<sizeArray2; i++){
+        printf("%d ",array2[i]);
+    }
+    printf("\n");
+    printf("Enter the index to rotate the array: "); scanf("%d",&rotate_index);
+    rotateArray(array1,sizeArray1,rotate_index);
+    rotateArray(array2,sizeArray2,rotate_index);
+    printf("Rotated array1: ");
+    for(int i=0; i<sizeArray1; i++){
+        printf("%d ",array1[i]);
+    }
+    printf("\n");
+    printf("Rotated array2: ");
+    for(int i=0; i<sizeArray2; i++){
+        printf("%d ",array2[i]);
     }
     printf("\n");
     
-    
-    int rotated_array1[]={15, 3, 10, 9, 8};
-    int size_a1=sizeof(rotated_array1)/sizeof(rotated_array1[0]);
-    int rotated_array2[]={5, 11, 2, 7, 4, 16};
-    int size_a2=sizeof(rotated_array2)/sizeof(rotated_array2[0]);
-    int rotated_index=4;
-    appendArrays(rotated_array1,rotated_array2,size_a1,size_a2,rotated_index);
-    for(int i=0; i < size_a1+size_a1; i++){
-        printf("%d ", rotated_array2[i]);
-    }
-    printf("\n");
-
     return 0;
 }
