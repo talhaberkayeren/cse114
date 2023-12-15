@@ -52,8 +52,7 @@ int main(){
         printf("%d ",array2[i]);
     }
     printf("\n");
-    int newArraySize = sizeArray1 + sizeArray2;
-    int new_array[newArraySize];
+    int new_array[sizeArray1+sizeArray2];
     appendArrays(array1, array2, sizeArray1, sizeArray2,new_array);
     printf("Appended array: ");
     for(int i=0; i<sizeArray1+sizeArray2; i++){
