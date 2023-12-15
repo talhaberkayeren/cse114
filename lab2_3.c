@@ -9,17 +9,17 @@ double calculateDrugA(int age){
 double calculateDrugB(int age, char gender){
     double A=calculateDrugA(age);
     if(age < 18){
-        if(gender == 'M') return 2*A + A/4;
-        if(gender == 'F') return 2*A + A/6;
+        if(gender == 'M') return (9*A)/4;
+        if(gender == 'F') return (13*A)/6;
         
     }
     else if(18<=age && age<65){
-        if(gender == 'M') return 5*A + 3*A/10;
-        if(gender == 'F') return 5*A + A/5;
+        if(gender == 'M') return (53*A)/10;
+        if(gender == 'F') return (26*A)/5;
     }
     else {
-        if(gender == 'M') return 3*A + 7*A/20;
-        if(gender == 'F') return 3*A + 7*A/30;
+        if(gender == 'M') return (67*A)/20;
+        if(gender == 'F') return (97*A)/30;
     }
 }
 
