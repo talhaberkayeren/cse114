@@ -4,14 +4,13 @@ void strConcat(char* str1, char* str2) {
     char* temp_str1 = str1;
     char* temp_str2 = str2;
     
-    // İlk dizede '\0' karakterini bulana kadar ilerle
+    // str1 de '\0' a kadar ilerliyoruz
     while (*temp_str1 != '\0') {
         temp_str1++;
     }
 
-    // İkinci dizede '\0' karakterini bulana kadar ilerle
     while (*temp_str2 != '\0') {
-        *temp_str1 = *temp_str2; // Karakteri kopyala
+        *temp_str1 = *temp_str2; //ekleme
         temp_str1++;
         temp_str2++;
     }
