@@ -16,11 +16,15 @@ int strFinder(char* str1, char* str2) {
             if (*temp_str2 == '\0') {
                 is_find++;
                 break;
-            } else {
+            } 
+            else 
+            {
                 temp_str2 = str2;
                 str1++;
             }
-        } else {
+        } 
+        else 
+        {
             str1++;
         }
     }
@@ -30,7 +34,7 @@ int strFinder(char* str1, char* str2) {
 
 int main() {
     char str1[20] = "I love Yeditepe";
-    char str2[20] = "love Ya";
+    char str2[20] = "z";
 
     if (strFinder(str1, str2)) {
         printf("Substring found.\n");
