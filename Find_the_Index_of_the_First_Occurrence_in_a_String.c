@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int strStr(char* haystack, char* needle) {
     char* temp_needle = needle;
     char* temp_haystack = haystack;
