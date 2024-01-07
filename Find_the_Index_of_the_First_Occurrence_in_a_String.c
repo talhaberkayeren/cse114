@@ -13,7 +13,8 @@ int strStr(char* haystack, char* needle) {
                     temp_haystack = temp_haystack_backup + 1;
                     temp_needle = needle;
                     break;
-                } else {
+                } 
+                else {
                     temp_haystack++;
                     temp_needle++;
                 }
@@ -22,7 +23,8 @@ int strStr(char* haystack, char* needle) {
             if (*temp_needle == '\0') {
                 return (temp_haystack_backup - haystack);
             }
-        } else {
+        } 
+        else {
             temp_haystack++;
         }
     }
